@@ -29,7 +29,11 @@ indexOf([1, 2, 3], 1)               // 0
 indexOf([1, 2, 3], 4)               // -1
 
 // 7 isPalindrome - Return true or false indicating whether the given string is a plaindrone (case and space insensitive).
-
+function isPalindrome (str) {
+    str = str.toLowerCase().replace(/\s/g, '')
+    var res = str.split('').reverse().join('')
+    return str === res
+}
 
 isPalindrome('')                                // true
 isPalindrome('abcdcba')                         // true
