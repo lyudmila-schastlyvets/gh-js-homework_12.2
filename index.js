@@ -29,6 +29,15 @@ isSorted([-Infinity, -5, 0, 3, 9])  // true
 isSorted([3, 9, -3, 10])            // false
 
 // 5 reverse - Reverses the given string (yes, using the built in reverse function is cheating).
+function reverse (str) {
+    var arr = str.split('');
+    var result = [];
+    for (let i = str.length - 1; i >=0; i--) {
+        result.push(arr[i]);
+    }
+    return result.join('');
+}
+
 reverse('')                         // ''
 reverse('abcdef')                   // 'fedcba'
 
