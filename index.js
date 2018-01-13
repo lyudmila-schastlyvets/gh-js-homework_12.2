@@ -51,6 +51,19 @@ fib(10)                             // 55
 fib(20)                             // 6765
 
 // 4 isSorted - Returns true or false, indicating whether the given array of numbers is sorted.
+function isSorted (arr) {
+    var arrCopy = [...arr]
+    arrCopy.sort(function (a, b) {
+        return a- b
+    })
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] !== arrCopy[i]) {
+            return false
+        }
+    }
+    return true
+}
+
 isSorted([])                        // true
 isSorted([-Infinity, -5, 0, 3, 9])  // true
 isSorted([3, 9, -3, 10])            // false
