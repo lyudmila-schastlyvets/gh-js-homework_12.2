@@ -82,7 +82,7 @@ reverse('')                         // ''
 reverse('abcdef')                   // 'fedcba'
 
 // 6 myIndexOf - Implement the indexOf function for arrays.
-Array.prototype.myIndexOf = function (arr, num) {
+function indexOf (arr, num) {
     for (var i = 0; i < arr.length; i++) {
         if (arr[i] === num) {
             return i
@@ -91,8 +91,8 @@ Array.prototype.myIndexOf = function (arr, num) {
     return -1
 }
 
-myIndexOf([1, 2, 3], 1)               // 0
-myIndexOf([1, 2, 3], 4)               // -1
+indexOf([1, 2, 3], 1)               // 0
+indexOf([1, 2, 3], 4)               // -1
 
 // 7 isPalindrome - Return true or false indicating whether the given string is a palindrome (case and space insensitive).
 function isPalindrome (str) {
