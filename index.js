@@ -123,6 +123,17 @@ missing([5, 1, 4, 2])               // 3
 missing([1, 2, 3, 4])               // undefined
 
 // 9 isBalanced - Takes a string and returns true or false indicating whether its curly braces are balanced.
+function isBalanced (str) {
+    if (str.indexOf('}{') >= 0) {
+        return false
+    }
+    str = str.replace(/[^{}]/g, '')
+    while (str.length > 1) {
+        str = str.replace(/{}/g, '')
+    }
+    return str.length === 0
+}
+
 isBalanced('}{')                      // false
 isBalanced('{{}')                     // false
 isBalanced('{}{}')                    // false
