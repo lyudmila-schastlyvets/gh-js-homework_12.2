@@ -1,4 +1,20 @@
 // 1 isPrime - Returns true or false, indicating whether the given number is prime.
+function isPrime(num) {
+    if (num > 0) {
+        var sqrtnum = Math.floor(Math.sqrt(num));
+        var prime = num != 1;
+        for (var i = 2; i < sqrtnum + 1; i++) {
+            if (num % i == 0) {
+                prime = false;
+                break;
+            }
+        }
+        return prime;
+    } else {
+        return false;
+    }
+}
+
 isPrime(0)                          // false
 isPrime(1)                          // false
 isPrime(17)                         // true
@@ -32,7 +48,7 @@ isSorted([3, 9, -3, 10])            // false
 function reverse (str) {
     var arr = str.split('');
     var result = [];
-    for (let i = str.length - 1; i >=0; i--) {
+    for (var i = str.length - 1; i >=0; i--) {
         result.push(arr[i]);
     }
     return result.join('');
