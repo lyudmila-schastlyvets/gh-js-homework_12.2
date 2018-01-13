@@ -82,6 +82,15 @@ reverse('')                         // ''
 reverse('abcdef')                   // 'fedcba'
 
 // 6 indexOf - Implement the indexOf function for arrays.
+Array.prototype.indexOf = function (arr, num) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === num) {
+            return i
+        }
+    }
+    return -1
+}
+
 indexOf([1, 2, 3], 1)               // 0
 indexOf([1, 2, 3], 4)               // -1
 
