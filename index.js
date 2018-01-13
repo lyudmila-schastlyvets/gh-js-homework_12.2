@@ -34,6 +34,17 @@ factorial(1)                        // 1
 factorial(6)                        // 720
 
 // 3 fib - Returns the nth Fibonacci number.
+function fib (num) {
+    var arr = [0]
+    if (num >= 1) {
+        arr.push(1)
+        for (var i = 2; i <= num; i++) {
+            arr.push(arr[i-1] + arr[i-2])
+        }
+    }
+    return arr[arr.length - 1]
+}
+
 fib(0)                              // 0
 fib(1)                              // 1
 fib(10)                             // 55
